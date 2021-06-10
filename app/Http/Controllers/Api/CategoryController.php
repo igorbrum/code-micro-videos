@@ -17,7 +17,7 @@ class CategoryController extends Controller
     public function store(CategoryRequest $request)
     {
         $validate = $request->validated();
-        return CategoryRequest::create($request);
+        return Category::create($validate);
     }
 
     public function show(Category $category)
